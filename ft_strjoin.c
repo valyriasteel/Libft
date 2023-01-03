@@ -42,4 +42,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	var2[] = " man";
 
 	printf("%s", ft_strjoin(var, var2));
-} */
+}
+ */

@@ -39,6 +39,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		c -= 32;
 	return (c);
 }
+
 int	main()
 {
 	printf("%s\n", ft_strmapi("hello", ft_up));

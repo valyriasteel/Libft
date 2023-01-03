@@ -31,5 +31,4 @@ char	*ft_strchr(const char *s, int c)
 	char	str[] = "helloworld";
 
 	printf("%s", ft_strchr(str, 'w'));
-}
- */
+} */

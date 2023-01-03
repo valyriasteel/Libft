@@ -28,8 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /* int main()
 {
-    char    var[] = "eeeeberateeee";
-    char    var2[] = "e";
+    char    var[] = "eeeeeeeeeeeeeeberateeee";
 
-    printf("%s", ft_strtrim(var, var2));
+    printf("%s", ft_strtrim(var, "e"));
 } */

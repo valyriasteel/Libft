@@ -30,7 +30,7 @@ static int	ft_numlen(int num)
 char	*ft_itoa(int n)
 {
 	int		len;
-	char	*dizi;
+	char	*array;
 	long	nbr;
 
 	nbr = n;
@@ -40,20 +40,20 @@ char	*ft_itoa(int n)
 		len++;
 		nbr = -nbr;
 	}
-	dizi = malloc(sizeof(char) * len + 1);
-	if (!dizi)
+	array = malloc(sizeof(char) * len + 1);
+	if (!array)
 		return (NULL);
-	dizi[len] = '\0';
+	array[len] = '\0';
 	while (nbr > 0)
 	{
-		dizi[--len] = nbr % 10 + 48;
+		array[--len] = nbr % 10 + 48;
 		nbr /= 10;
 	}
 	if (n < 0)
-		dizi[0] = '-';
+		array[0] = '-';
 	if (n == 0)
-		dizi[0] = '0';
-	return (dizi);
+		array[0] = '0';
+	return (array);
 }
 
 /* int main()

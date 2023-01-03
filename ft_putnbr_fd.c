@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbosnak <bbosnak@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 18:36:59 by bbosnak           #+#    #+#             */
-/*   Updated: 2022/12/26 18:37:00 by bbosnak          ###   ########.tr       */
+/*   Created: 2023/01/03 17:48:14 by bbosnak           #+#    #+#             */
+/*   Updated: 2023/01/03 17:48:15 by bbosnak          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	int	i;
-	int	res;
-	int	pn;
-
-	pn = 1;
-	i = 0;
-	res = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (nb == -2147483648)
 	{
-		if (str[i] == '-')
-			pn = -1;
-		i++;
+		write(fd, "-2147483648", 11);
 	}
-	while (str[i] >= 48 && str[i] <= '9' && str[i])
+	else if (nb < 0)
 	{
-		res = (str[i] - 48) + (res * 10);
-		i++;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-nb, fd);
 	}
-	return (pn * res);
+	else if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
+	else
+	{
+		ft_putchar_fd(nb + '0', fd);
+	}
 }
 
-/* int main()
+/* int	main()
 {
-    printf("%d", ft_atoi("-345435"));
+	int	fd;
+
+	fd = open("deneme.txt", O_WRONLY | O_CREAT, 0666);
+	ft_putnbr_fd(1234123, fd);
 } */
