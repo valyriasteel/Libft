@@ -26,12 +26,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-/* void ft_print(unsigned int i, char *str)
+void ft_print(unsigned int i, char *str)
 {
 	printf("%c\n", str[0]);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	ft_striteri("hello", ft_print);
 } */

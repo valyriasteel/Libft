@@ -20,7 +20,10 @@ void	ft_putchar_fd(char c, int fd)
 /* int	main(void)
 {
 	int	fd;
+	int fd2;
 
+	fd2 = open("b.txt", O_WRONLY | O_CREAT, 0666);
 	fd = open("deneme.txt", O_WRONLY | O_CREAT, 0666);
+	printf("%d\n", fd);
 	ft_putchar_fd('b', fd);
 } */

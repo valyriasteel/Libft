@@ -38,6 +38,6 @@ void	ft_putnbr_fd(int nb, int fd)
 {
 	int	fd;
 
-	fd = open("deneme.txt", O_WRONLY | O_CREAT, 0666);
+	fd = open("deneme.txt", O_WRONLY | O_CREAT);
 	ft_putnbr_fd(1234123, fd);
 } */

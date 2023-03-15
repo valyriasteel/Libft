@@ -34,7 +34,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 char	ft_up(unsigned int i, char c)
 {
-	printf("%i\n", i);
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
