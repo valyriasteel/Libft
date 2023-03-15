@@ -24,7 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return ((char)*s1 - (char)*s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
 
 /* int	main(void)
