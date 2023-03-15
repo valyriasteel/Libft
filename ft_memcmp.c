@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bbosnak <bbosnak@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/19 19:40:00 by bbosnak           #+#    #+#             */
+/*   Updated: 2022/12/19 19:40:01 by bbosnak          ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((char *)s1)[i] != ((char *)s2)[i])
+			return (((char *)s1)[i] - ((char *)s2)[i]);
+		i++;
+	}
+	return (0);
+}
+
+/* int main(void)
+{
+    char    p[] = "mustafa";
+    char    s[] = "musti";
+
+    printf("%d", ft_memcmp(p, s, 5));
+} */
