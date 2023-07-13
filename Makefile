@@ -6,7 +6,7 @@ SRC = $(shell find . -name "ft_*.c")
 all: $(NAME)
 
 $(NAME):
-		gcc $(FLAGS) $(OPTION) $(SRC)
+		gcc $(FLAGS) $(OPTION) $(SRC) I .
 		ar rc $(NAME) *.o
 clean:
 		rm -f *.o
