@@ -14,17 +14,21 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (s)
-		while (s[i])
-			write (fd, &s[i++], 1);
+	while (s[i])
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
 }
 
 /* int	main(void)
 {
 	int	fd;
-	fd = open("deneme.txt", O_WRONLY | O_CREAT, 0666);
+
+	fd = open("deneme.txt", O_CREAT | O_WRONLY, 0666);
 	ft_putstr_fd("berat", fd);
+	printf("%d\n", fd);
 } */

@@ -35,7 +35,7 @@ int	wordcounter(const char *p, char c)
 
 char	*worddup(const char *s, int start, int end)
 {
-	int		i;
+	size_t	i;
 	char	*word;
 
 	i = 0;
@@ -51,18 +51,18 @@ char	*worddup(const char *s, int start, int end)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	size_t	i;
-	int		a;
+	int		i;
+	size_t	a;
 	int		start;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	i = -1;
 	a = 0;
 	start = -1;
 	split = malloc(sizeof(char *) * (wordcounter(s, c) + 1));
 	if (!split)
-		return (0);
+		return (NULL);
 	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && start < 0)
@@ -73,17 +73,20 @@ char	**ft_split(char const *s, char c)
 			start = -1;
 		}
 	}
-	split[a] = NULL;
+	split[a] = '\0';
 	return (split);
 }
 
 /* int	main(void)
 {
-	char **a = ft_split("*hello*my*na*me*is berat**", '*');
-	int i=0;
-	while (i<5)
+	char	**split;
+	size_t	i;
+
+	i = 0;
+	split = ft_split("*hello*my*na*me*is berat**", '*');
+	while (i < 5)
 	{
-		printf("%s\n",a[i]);
+		printf("%s\n", split[i]);
 		i += 1;
 	}
 } */

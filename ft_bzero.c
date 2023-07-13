@@ -17,10 +17,10 @@ void	ft_bzero(void *str, size_t n)
 	ft_memset(str, '\0', n);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-	char	var[] = "berat";
+	char	str[] = "canodis";
 
-	ft_bzero(var, 4);
-	printf("%s", var);
+	ft_bzero(str, 4);
+	printf("%d | %d\n", str[3], str[4]);
 } */

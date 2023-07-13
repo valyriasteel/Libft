@@ -22,6 +22,5 @@ int	ft_isascii(int c)
 
 /* int	main(void)
 {
-    printf("%d\n", ft_isascii(45));
-    printf("%d", ft_isascii(128));
+    printf("%d | %d\n", ft_isascii(45), ft_isascii(128));
 } */

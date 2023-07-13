@@ -12,25 +12,22 @@
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (*s1 == *s2 && ++i < n && *s1 && *s2)
+	while (*str1 == *str2 && ++i < n)
 	{
-		s1++;
-		s2++;
+		str1++;
+		str2++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return ((unsigned char)*str1 - (unsigned char)*str2);
 }
 
 /* int	main(void)
 {
-	char	var[] = "bbb";
-	char	var2[] = "bbd";
-
-	printf("%d", ft_strncmp(var, var2, 3));
+	printf("%d\n", ft_strncmp("bbd", "bbb", 3));
 } */

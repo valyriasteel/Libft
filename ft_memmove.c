@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	void	*tmp;
 
-	tmp = malloc(sizeof(char) * len);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
+	tmp = malloc(sizeof(char) * n);
+	ft_memcpy(tmp, src, n);
+	ft_memcpy(dest, tmp, n);
 	free(tmp);
-	return (dst);
+	return (dest);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-    char    var[] = "helloberat";
+    char    str[] = "helloberat";
 
-    printf("%s", ft_memmove(var + 2, var, 5));
+    printf("%s\n", ft_memmove(str + 2, str, 5));
 } */

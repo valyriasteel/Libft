@@ -22,6 +22,5 @@ int	ft_isalpha(int c)
 
 /* int	main(void)
 {
-	printf("%d\n", ft_isalpha('5'));
-	printf("%d", ft_isalpha('B'));
+	printf("%d | %d\n", ft_isalpha('5'), ft_isalpha('B'));
 } */

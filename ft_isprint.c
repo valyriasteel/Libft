@@ -22,6 +22,5 @@ int	ft_isprint(int c)
 
 /* int	main(void)
 {
-printf("%d\n", ft_isprint(31));
-printf("%d", ft_isprint(59));
+	printf("%d | %d\n", ft_isprint(31), ft_isprint(59));
 } */

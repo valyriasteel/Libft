@@ -14,26 +14,30 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new_str;
+	char	*str;
 	size_t	i;
-	size_t	j;
 
-	i = start;
-	j = 0;
-	new_str = (char *)malloc(len + 1);
-	if (!s || !new_str)
+	i = 0;
+	if (!s)
 		return (0);
-	while (i < ft_strlen(s) && j < len)
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	while (i < len && s[start])
 	{
-		new_str[j++] = s[i++];
+		str[i] = s[start];
+		i++;
+		start++;
 	}
-	new_str[j] = '\0';
-	return (new_str);
+	str[i] = '\0';
+	return (str);
 }
 
 /* int	main(void)
 {
-	char	var[] = "berat";
-
-	printf("%s", ft_substr(var, 0, 5));
+	printf("%s\n", ft_substr("berat", 0, 5));
 } */

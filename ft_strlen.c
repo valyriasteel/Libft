@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *str)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 /* int	main(void)
 {
-	printf("%zu", ft_strlen("berat"));
+	printf("%zu\n", ft_strlen("berat"));
 } */

@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = ft_strlen(needle);
 	while (*haystack && i <= len--)
 	{
-		if (!(ft_strncmp((char *)haystack, (char *)needle, i)))
+		if (!(ft_strncmp(haystack, needle, i)))
 			return ((char *)haystack);
 		haystack++;
 	}
@@ -30,7 +30,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 /* int	main(void)
 {
-	char	var[] = "berat";
-
-	printf("%s", ft_strnstr(var, "r", 4));
+	printf("%s\n", ft_strnstr("berat", "r", 3));
 } */

@@ -12,25 +12,25 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (nb == -2147483648)
+	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
 	}
-	else if (nb < 0)
+	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-nb, fd);
+		ft_putnbr_fd(-n, fd);
 	}
-	else if (nb > 9)
+	else if (n > 9)
 	{
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putnbr_fd(nb % 10, fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 	{
-		ft_putchar_fd(nb + '0', fd);
+		ft_putchar_fd(n + '0', fd);
 	}
 }
 
@@ -38,6 +38,7 @@ void	ft_putnbr_fd(int nb, int fd)
 {
 	int	fd;
 
-	fd = open("deneme.txt", O_WRONLY | O_CREAT);
-	ft_putnbr_fd(1234123, fd);
+	fd = open("deneme.txt", O_CREAT | O_WRONLY, 0666);
+	ft_putnbr_fd(1905, fd);
+	printf("%d\n", fd);
 } */

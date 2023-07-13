@@ -21,5 +21,5 @@ int	ft_toupper(int c)
 
 /* int main(void)
 {
-    printf("%c", ft_toupper('b'));
+    printf("%c\n", ft_toupper('b'));
 } */

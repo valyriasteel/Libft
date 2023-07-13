@@ -21,5 +21,5 @@ int	ft_tolower(int c)
 
 /* int main(void)
 {
-    printf("%c", ft_tolower('B'));
+    printf("%c\n", ft_tolower('B'));
 } */

@@ -38,8 +38,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 /* int	main(void)
 {
-	char	var[] = "hello";
-	char	var2[] = " man";
-
-	printf("%s", ft_strjoin(var, var2));
+	printf("%s\n", ft_strjoin("hello", " bro"));
 } */

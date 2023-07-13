@@ -29,24 +29,24 @@ int	ft_numlen(int num)
 
 char	*ft_itoa(int n)
 {
-	int		len;
+	size_t	i;
 	char	*array;
 	long	nbr;
 
 	nbr = n;
-	len = ft_numlen(nbr);
+	i = ft_numlen(nbr);
 	if (n < 0)
 	{
-		len++;
+		i++;
 		nbr = -nbr;
 	}
-	array = malloc(sizeof(char) * len + 1);
+	array = malloc(sizeof(char) * i + 1);
 	if (!array)
 		return (NULL);
-	array[len] = '\0';
+	array[i] = '\0';
 	while (nbr > 0)
 	{
-		array[--len] = nbr % 10 + 48;
+		array[--i] = nbr % 10 + 48;
 		nbr /= 10;
 	}
 	if (n < 0)
@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 	return (array);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-    printf("%s", ft_itoa(-23425));
+    printf("%s\n", ft_itoa(-23425));
 } */

@@ -14,12 +14,13 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	else
+		return (0);
 }
 
 /* int	main(void)
 {
-    printf("%d\n", ft_isalnum('2'));
- 	printf("%d\n", ft_isalnum('a'));
- 	printf("%d", ft_isalnum('/'));
+    printf("%d | %d | %d\n", ft_isalnum('2'), ft_isalnum('a'), ft_isalnum('/'));
 } */

@@ -21,7 +21,8 @@ void	ft_putendl_fd(char *s, int fd)
 /* int	main(void)
 {
 	int	fd;
-	fd = open("deneme.txt", O_WRONLY | O_CREAT, 0666);
+
+	fd = open("deneme.txt", O_CREAT | O_WRONLY, 0666);
 	ft_putendl_fd("hello", fd);
-	ft_putendl_fd("welcomemyworld", fd);
+	printf("%d\n", fd);
 } */

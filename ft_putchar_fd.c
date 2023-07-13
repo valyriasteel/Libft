@@ -22,8 +22,9 @@ void	ft_putchar_fd(char c, int fd)
 	int	fd;
 	int fd2;
 
-	fd2 = open("b.txt", O_WRONLY | O_CREAT, 0666);
-	fd = open("deneme.txt", O_WRONLY | O_CREAT, 0666);
-	printf("%d\n", fd);
+	fd = open("deneme.txt", O_CREAT | O_WRONLY, 0666);
+	fd2 = open("deneme2.txt", O_CREAT | O_WRONLY, 0666);
 	ft_putchar_fd('b', fd);
+	ft_putchar_fd('c', fd2);
+	printf("%d | %d\n", fd, fd2);
 } */

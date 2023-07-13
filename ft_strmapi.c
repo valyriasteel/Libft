@@ -32,14 +32,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (array);
 }
 
-char	ft_up(unsigned int i, char c)
+/* char	ft_up(unsigned int i, char c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	printf("%s\n", ft_strmapi("hello", ft_up));
 } */

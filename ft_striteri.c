@@ -14,11 +14,11 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	size_t	i;
 
+	i = 0;
 	if (!s || !f)
 		return ;
-	i = 0;
 	while (s[i])
 	{
 		f(i, s + i);
@@ -26,12 +26,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-void ft_print(unsigned int i, char *str)
+/* void ft_print(unsigned int i, char *str)
 {
-	printf("%c\n", str[0]);
+	printf("%d: %c\n", i, *str);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	ft_striteri("hello", ft_print);
 } */

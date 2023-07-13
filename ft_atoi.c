@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	res;
-	int	pn;
+	size_t	i;
+	int		res;
+	int		pn;
 
 	pn = 1;
 	i = 0;
@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 	return (pn * res);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-    printf("%d", ft_atoi("-345"));
+    printf("%d\n", ft_atoi("-345"));
 } */

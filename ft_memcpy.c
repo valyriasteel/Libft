@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n && src)
+	while (i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
 		i++;
@@ -25,9 +25,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-    char src[] = "merhabalar";
+    char	str[] = "merhabalar";
 
-    printf("%s\n", ft_memcpy(src + 2, src, 5), src);
+    printf("%s\n", ft_memcpy(str + 2, str, 5));
 } */
