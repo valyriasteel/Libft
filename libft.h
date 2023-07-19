@@ -15,9 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-//# include <string.h>
-# include <fcntl.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 char		*ft_strchr(const char *str, int c);
 char		*ft_strrchr(const char *str, int c);
@@ -50,8 +53,10 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 void		*ft_memset(void *str, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
+void		ft_lstadd_front(t_list **lst, t_list *new);
 size_t		ft_strlen(const char *str);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
+t_list		*ft_lstnew(void *content);
 
 #endif
