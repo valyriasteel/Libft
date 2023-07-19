@@ -51,7 +51,7 @@ char	*worddup(const char *s, int start, int end)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		i;
+	size_t	i;
 	size_t	a;
 	int		start;
 
