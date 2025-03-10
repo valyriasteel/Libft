@@ -117,7 +117,7 @@ String length: 13
 ```
 
 ## 📜 License
-This project is licensed under the **MIT License**.
+This project is licensed under the **[MIT License](LICENSE)**.
 
 ## 📧 Contact
 For any questions or feedback, feel free to reach out via GitHub!
