@@ -80,13 +80,13 @@ To use the Libft library in your project, include the header file as follows:
 Then, compile your program with:
 
 ```sh
-gcc main.c -L. -lft -o program
+cc main.c -L. -lft -o program
 ```
 
 If `main.c` is located in a different directory:
 
 ```sh
-gcc src/main.c -Llibft -lft -Ilibft -o program
+cc src/main.c -Llibft -lft -Ilibft -o program
 ```
 
 ### Example Usage with `libft.a`
@@ -107,7 +107,7 @@ int main() {
 
 Compile and link with `libft.a`:
 ```sh
-gcc main.c -L. -lft -o my_program
+cc main.c -L. -lft -o my_program
 ./my_program
 ```
 
